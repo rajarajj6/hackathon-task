@@ -7,14 +7,25 @@
     <title>cat Api</title>
 </head>
 <body>
-    <section class ="container">
-        <input type="text" placeholder="paste url" class="search-avatar" />
-    <button onclick="search()">search
-    </button>
-    </section>
-    <img src="https://purr.objects-us-east-1.dream.io/i/nhmXs.jpg">
+   <h3>SEARCH</h3>
+   <span class="form">
+       <input type="text" name="tag" size="40" id="tag_search"/>
+   </span>
+   <p></p>
+   <button onclick="getCatsByTag(document.getElementById('tag_search').value)">Search</button>
 
-    <div class ="user-list"></div>
+<div class="d-flex justify-content-center">
+    <div class="spinner-border" role="status" id="loading">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+
+<h1>cats</h1>
+
+<!-- table for showing data -->
+<table id="cats"></table>
+
+
     <script src="script.js"></script>
 </body>
 </html>
